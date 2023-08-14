@@ -31,7 +31,7 @@ function Signup() {
   return (
     <div className='d-flex justify-content-center align-items-center bg-primary vh-100'>
     <div className='bg-white p-3 rounded w-25'>
-        <h2>Sing Up</h2>
+        <h2>Sign Up</h2>
         <form action='' onSubmit={handleSubmit}>
         <div className='mb-3'>
                 <label htmlFor="name"><strong>Name</strong> </label>
@@ -48,9 +48,19 @@ function Signup() {
                 <input type='password'  placeholder='Enter Password' name='password' onChange={handleInput} className='form-control rounded-0'/>
                 {errors.password && <span className='text-danger'>{errors.password}</span>}
             </div>
+            {/* <div className='mb-3'>
+                <label htmlFor="role"><strong>Role</strong> </label>
+                <select name='role' onChange={handleInput} className='form-control rounded-0'>
+                    <option value='client'>Client</option>
+                    <option value='admin'>Admin</option>
+                    <option value='manager'>Manager</option>
+                    <option value='clerk'>Clerk</option>
+                </select>
+                {errors.role && <span className='text-danger'>{errors.role}</span>}
+            </div> */}
             <button type='submit' className='btn btn-success w-100 rounded-0'>Sign up</button>
-            <p>You agree to our terms and conditions</p>
-            <Link to='/login' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Create Account</Link>
+          
+            <Link to='/' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Login</Link>
         </form>
     </div>
 </div>
